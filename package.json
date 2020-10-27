@@ -1,0 +1,19 @@
+{
+  "name": "nietonaranjodavid_20201026_Vehiculo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.0.5"
+  },
+  "dependencies": {
+    "@types/mongoose": "^5.7.36",
+    "mongoose": "^5.10.11"
+  }
+}
