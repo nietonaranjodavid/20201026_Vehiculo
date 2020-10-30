@@ -4,7 +4,7 @@ export const menu = async () => {
     let n: number
     console.log('\n')
     console.log('1.- CREAR vehiculo')
-    console.log('2.- VER vehiculos')
+    console.log('2.- VER vehiculoS')
     console.log('3.- BORRAR vehiculo')
     console.log('4.- ELEGIR vehiculo')
     console.log('0.- SALIR')
@@ -23,3 +23,4 @@ export const menu2 = async () => {
     n = parseInt( await leerTeclado('--OPCIÓN--') )
     return n
 }
+
