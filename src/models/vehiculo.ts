@@ -1,4 +1,5 @@
 export class vehiculo {
+    
     private _matricula : string
     private _consumo : number 
     private _arrancado : boolean
@@ -11,15 +12,15 @@ export class vehiculo {
         this._velocidad = 0
     }
 
-    get matricula(){
+    matricula(){
         return this._matricula
     }
 
-    get consumo(){
+    consumo(){
         return this._consumo
     }
 
-    get arrancado(){
+    arrancado(){
         return this._arrancado
     }
 
@@ -28,7 +29,7 @@ export class vehiculo {
             this._arrancado=true
         }else{
             if (this._velocidad!=0){
-                throw 'ERROR no puede apagar el vehiculo si no está parado'
+                throw 'No puede apagar el vehiculo si está en movimiento'
             } else {
                 this._arrancado=false
             }
@@ -41,22 +42,20 @@ export class vehiculo {
 
     set velocidad(n:number){
         if(this._arrancado==false){
-            throw 'ERROR, no puedes cambiar la velocidad a un vehiculo que no está arrancado'
+            throw 'Para cambiar de velocidad debe de estar arrancado el vehiculo'
         } else {
             this._velocidad=n
         }
     }
 
     consumido(t:number){ 
-        if(!this._arrancado || this._velocidad==0){
-            throw 'ERROR, no puedes calcular el consumo de un vehiculo parado o no arrancado'
-        } else {
+        
             return (this._velocidad/t)*(this._consumo/100)
-        }
+        
     }
 
     imprimirvehiculo(){
-        return `El vehiculo con matricula ${this.matricula} va a ${this._velocidad} km/h y consume ${this._consumo} L cada 100 km`
+        return `El vehiculo ${this.matricula} tiene una velocidad de ${this._velocidad} km/h y consume ${this._consumo} L cada 100 km`
     }
 
 }

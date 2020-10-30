@@ -53,12 +53,6 @@ const main = async() => {
                     m2=await leerTeclado('Introduzca la matrícula del vehiculo que quiera borrar')
                     let e:boolean=false
                     let index=0
-                    for (let c of vehiculos){
-                        if (m2==c.matricula){
-                            index=vehiculos.indexOf(c)
-                            e=true
-                        }
-                    }
                     if (e){
                        vehiculos.splice(index,1)
                     } else {
@@ -77,11 +71,7 @@ const main = async() => {
                     }
                     m1=await leerTeclado('Introduzca la matrícula del vehiculo')
                     let index:number=-1
-                    for(let c of vehiculos){
-                        if(c.matricula==m1){
-                            index=vehiculos.indexOf(c)
-                         }
-                    }
+
                     if(index!=-1){
                         let n2:number
                         let mivehiculo=vehiculos[index]
